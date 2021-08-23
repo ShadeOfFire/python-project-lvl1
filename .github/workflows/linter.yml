@@ -1,10 +1,13 @@
 name: linter
-on: push
+on: 
+     - push
+     - pull_request
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
       - name: install poetry
         run: pip install poetry
+             make install
       - name: run linter
         run: make lint
