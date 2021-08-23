@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.0"
+version = "0.1.4"
 description = ""
 authors = ["airmage <airmage2@gmail.com>"]
 packages = [
@@ -9,8 +9,10 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
+prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
