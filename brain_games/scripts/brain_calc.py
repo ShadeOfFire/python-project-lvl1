@@ -24,13 +24,14 @@ def main():
         operations_list = ['+', '-', '*']
         operation = random.choice(operations_list)
         print('Question: ', first_number, ' ', operation, ' ', second_number)
-        answer = int(prompt.string('Your answer: '))
-        correct_answer = result(first_number, second_number, operation)
-        if answer == correct_answer:
+        ans = prompt.string('Your answer: ')
+        correct_answer = str(result(first_number, second_number, operation))
+        if ans == correct_answer:
             success = success + 1
             print("Correct!")
         else:
-            print("'", answer, "' is wrong answer ;(. Correct answer was '", correct_answer,"'")
+            wrong_text = "' is wrong answer ;(. Correct answer was '"
+            print("'", ans, wrong_text, correct_answer, "'")
             print("Let's try again, " + cli.name)
             break
         if success == 3:
