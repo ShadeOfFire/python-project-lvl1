@@ -14,9 +14,8 @@ def result(number):
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    cli.welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no"')
+    rules = 'Answer "yes" if the number is even, otherwise answer "no"'
+    cli.welcome_user(rules)
     success = 0
     while success < 3:
         qnumber = random.randrange(2, 100, 1)
