@@ -4,3 +4,4 @@
 ![example workflow](https://github.com/ShadeOfFire/python-project-lvl1/actions/workflows/linter.yml/badge.svg)
 asciinema https://asciinema.org/a/lQV60FAzB34Ies4W0W7WlHvgH
 https://asciinema.org/a/w2hlOul4zAAgDjQKxefuGU8Es
+https://asciinema.org/a/P9eBIUDZZPT3yoolUu194rwHz

@@ -17,6 +17,10 @@ def result_nod(a, b):
     return gcd(a, b)
 
 
+def result_progression(start, step, index):
+    return (start + step * index)
+
+
 def calculations_game():
     success = 0
     while success < 3:
@@ -47,6 +51,33 @@ def nod_game():
         print('Question: ', first_number, ' ', second_number)
         ans = prompt.string('Your answer: ')
         correct_answer = str(result_nod(first_number, second_number))
+        if ans == correct_answer:
+            success = success + 1
+            print("Correct!")
+        else:
+            wrong_text = "' is wrong answer ;(. Correct answer was '"
+            print("'", ans, wrong_text, correct_answer, "'")
+            print("Let's try again, " + cli.name)
+            break
+        if success == 3:
+            print("Congratulations, " + cli.name)
+
+
+def progression_game():
+    success = 0
+    while success < 3:
+        first_number = random.randrange(2, 10, 1)
+        prog_step = random.randrange(1, 5, 1)
+        mis_num = random.randrange(1, 10, 1)
+        print('Question: ', first_number, ' ', end='')
+        for i in range(10):
+            if (i + 1) == mis_num:
+                print('.. ', end='')
+            else:
+                print(first_number + prog_step * (i + 1), ' ', end='')
+        print()
+        ans = prompt.string('Your answer: ')
+        correct_answer = str(result_progression(first_number, prog_step, mis_num))
         if ans == correct_answer:
             success = success + 1
             print("Correct!")
