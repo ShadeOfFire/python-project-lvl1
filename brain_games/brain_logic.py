@@ -2,7 +2,6 @@ import prompt
 import random
 import math
 from brain_games import cli
-from fractions import gcd
 
 
 def good():
@@ -11,7 +10,7 @@ def good():
 
 
 def result_nod(a, b):
-    return gcd(a, b)
+    return math.gcd(a, b)
 
 
 def result_progression(start, step, index):
