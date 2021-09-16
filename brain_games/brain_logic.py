@@ -29,7 +29,7 @@ def nod_game():
     while success < 3:
         first_number = random.randrange(2, 100, 1)
         second_number = random.randrange(2, 100, 1)
-        text = 'Question:' + str(first_number) + ' ' + str(second_number)
+        text = 'Question: ' + str(first_number) + ' ' + str(second_number)
         print(text)
         ans = prompt.string('Your answer: ')
         correct_answer = str(result_nod(first_number, second_number))
