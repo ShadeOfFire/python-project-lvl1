@@ -31,7 +31,8 @@ def main():
             print("Correct!")
         else:
             print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-            print("Let's try again, " + cli.name)
+            text = "Let's try again, " + cli.name + "!"
+            print(text)
             break
     if success == 3:
         good()

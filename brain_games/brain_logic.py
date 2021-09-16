@@ -50,8 +50,8 @@ def calculations_game():
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
             text = "'" + ans + wrong_text + correct_answer + "'"
+            text = "Let's try again, " + cli.name + "!"
             print(text)
-            print("Let's try again, " + cli.name)
             break
         if success == 3:
             good()
@@ -71,8 +71,8 @@ def nod_game():
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
             text = "'" + ans + wrong_text + correct_answer + "'"
+            text = "Let's try again, " + cli.name + "!"
             print(text)
-            print("Let's try again, " + cli.name)
             break
         if success == 3:
             good()
@@ -99,8 +99,8 @@ def progression_game():
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
             text = "'" + ans + wrong_text + correct_ans + "'"
+            text = "Let's try again, " + cli.name + "!"
             print(text)
-            print("Let's try again, " + cli.name)
             break
         if success == 3:
             good()
@@ -120,7 +120,8 @@ def prime_game():
             wrong_text = "' is wrong answer ;(. Correct answer was '"
             text = "'" + ans + wrong_text + correct_answer + "'"
             print(text)
-            print("Let's try again, " + cli.name)
+            text = "Let's try again, " + cli.name + "!"
+            print(text)
             break
         if success == 3:
             good()
