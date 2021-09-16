@@ -5,6 +5,11 @@ from brain_games import cli
 from fractions import gcd
 
 
+def good():
+    text = "Congratulations, " + cli.name + "!"
+    print(text)
+
+
 def result_calc(a, b, c):
     if c == '+':
         return (a + b)
@@ -49,7 +54,7 @@ def calculations_game():
             print("Let's try again, " + cli.name)
             break
         if success == 3:
-            print("Congratulations, " + cli.name)
+            good()
 
 
 def nod_game():
@@ -70,7 +75,7 @@ def nod_game():
             print("Let's try again, " + cli.name)
             break
         if success == 3:
-            print("Congratulations, " + cli.name)
+            good()
 
 
 def progression_game():
@@ -98,7 +103,7 @@ def progression_game():
             print("Let's try again, " + cli.name)
             break
         if success == 3:
-            print("Congratulations, " + cli.name)
+            good()
 
 
 def prime_game():
@@ -118,4 +123,4 @@ def prime_game():
             print("Let's try again, " + cli.name)
             break
         if success == 3:
-            print("Congratulations, " + cli.name)
+            good()

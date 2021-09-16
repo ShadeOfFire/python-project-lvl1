@@ -6,6 +6,11 @@ import random
 from brain_games import cli
 
 
+def good():
+    text = "Congratulations, " + cli.name + "!"
+    print(text)
+
+
 def result(number):
     if number % 2 == 0:
         return "yes"
@@ -29,7 +34,7 @@ def main():
             print("Let's try again, " + cli.name)
             break
     if success == 3:
-        print("Congratulations, " + cli.name)
+        good()
 
 
 if __name__ == '__main__':
