@@ -62,7 +62,8 @@ def nod_game():
     while success < 3:
         first_number = random.randrange(2, 100, 1)
         second_number = random.randrange(2, 100, 1)
-        print('Question:', first_number, ' ', second_number)
+        text = 'Question:' + first_number + ' ' + second_number
+        print(text)
         ans = prompt.string('Your answer: ')
         correct_answer = str(result_nod(first_number, second_number))
         if ans == correct_answer:
@@ -84,7 +85,8 @@ def progression_game():
         first_number = random.randrange(2, 10, 1)
         prog_step = random.randrange(1, 5, 1)
         mis_num = random.randrange(1, 10, 1)
-        print('Question: ', first_number, ' ', end='')
+        text = 'Question: ' + first_number + ' '
+        print(text, end='')
         for i in range(10):
             if (i + 1) == mis_num:
                 print('.. ', end='')

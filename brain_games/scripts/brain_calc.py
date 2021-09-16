@@ -27,10 +27,11 @@ def main():
         first_number = random.randrange(2, 100, 1)
         second_number = random.randrange(2, 100, 1)
         operations_list = ['+', '-', '*']
-        operation = random.choice(operations_list)
-        print('Question: ', first_number, ' ', operation, ' ', second_number)
+        oper = random.choice(operations_list)
+        text = 'Question: ' + first_number + ' ' + oper + ' ' + second_number
+        print(text)
         ans = prompt.string('Your answer: ')
-        correct_answer = str(result(first_number, second_number, operation))
+        correct_answer = str(result(first_number, second_number, oper))
         if ans == correct_answer:
             success = success + 1
             print("Correct!")
