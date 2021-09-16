@@ -23,13 +23,10 @@ def result_progression(start, step, index):
 
 
 def result_prime(num):
-    if num > 1:
-        for i in range(2, math.floor(math.sqrt(num))):
-            if (num % i) == 0:
-                return ('no')
-        return ('yes')
-    else:
-        print(num, "is not a prime number")
+    for i in range(2, math.floor(math.sqrt(num))):
+        if (num % i) == 0:
+            return ('no')
+    return ('yes')
 
 
 def calculations_game():
@@ -39,7 +36,7 @@ def calculations_game():
         second_number = random.randrange(2, 100, 1)
         operations_list = ['+', '-', '*']
         op = random.choice(operations_list)
-        print('Question: ', first_number, ' ', op, ' ', second_number)
+        print('Question:', first_number, ' ', op, ' ', second_number)
         ans = prompt.string('Your answer: ')
         correct_answer = str(result_calc(first_number, second_number, op))
         if ans == correct_answer:
@@ -47,7 +44,8 @@ def calculations_game():
             print("Correct!")
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
-            print("'", ans, wrong_text, correct_answer, "'")
+            text = "'" + ans + wrong_text + correct_answer + "'"
+            print(text)
             print("Let's try again, " + cli.name)
             break
         if success == 3:
@@ -59,7 +57,7 @@ def nod_game():
     while success < 3:
         first_number = random.randrange(2, 100, 1)
         second_number = random.randrange(2, 100, 1)
-        print('Question: ', first_number, ' ', second_number)
+        print('Question:', first_number, ' ', second_number)
         ans = prompt.string('Your answer: ')
         correct_answer = str(result_nod(first_number, second_number))
         if ans == correct_answer:
@@ -67,7 +65,8 @@ def nod_game():
             print("Correct!")
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
-            print("'", ans, wrong_text, correct_answer, "'")
+            text = "'" + ans + wrong_text + correct_answer + "'"
+            print(text)
             print("Let's try again, " + cli.name)
             break
         if success == 3:
@@ -94,7 +93,8 @@ def progression_game():
             print("Correct!")
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
-            print("'", ans, wrong_text, correct_ans, "'")
+            text = "'" + ans + wrong_text + correct_ans + "'"
+            print(text)
             print("Let's try again, " + cli.name)
             break
         if success == 3:
@@ -105,7 +105,7 @@ def prime_game():
     success = 0
     while success < 3:
         number = random.randrange(2, 100, 1)
-        print('Question: ', number)
+        print('Question:', number)
         ans = prompt.string('Your answer: ')
         correct_answer = result_prime(number)
         if ans == correct_answer:
@@ -113,7 +113,8 @@ def prime_game():
             print("Correct!")
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
-            print("'", ans, wrong_text, correct_answer, "'")
+            text = "'" + ans + wrong_text + correct_answer + "'"
+            print(text)
             print("Let's try again, " + cli.name)
             break
         if success == 3:

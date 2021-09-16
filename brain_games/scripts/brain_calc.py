@@ -31,7 +31,8 @@ def main():
             print("Correct!")
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
-            print("'", ans, wrong_text, correct_answer, "'")
+            text = "'" + str(ans) + wrong_text + correct_answer + "'"
+            print(text)
             print("Let's try again, " + cli.name)
             break
         if success == 3:

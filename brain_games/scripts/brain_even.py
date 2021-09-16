@@ -19,7 +19,7 @@ def main():
     success = 0
     while success < 3:
         qnumber = random.randrange(2, 100, 1)
-        print('Question: ', qnumber)
+        print('Question:', qnumber)
         answer = prompt.string('Your answer: ')
         if answer == result(qnumber):
             success = success + 1
