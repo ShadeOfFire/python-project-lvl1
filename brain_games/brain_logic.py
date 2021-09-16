@@ -58,7 +58,8 @@ def progression_game():
             if (i + 1) == mis_num:
                 print('.. ', end='')
             else:
-                print(first_number + prog_step * (i + 1), end='')
+                text = str(first_number + prog_step * (i + 1)) + ' '
+                print(text, end='')
         print()
         ans = prompt.string('Your answer: ')
         correct_ans = str(result_progression(first_number, prog_step, mis_num))
