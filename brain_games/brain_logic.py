@@ -10,15 +10,6 @@ def good():
     print(text)
 
 
-def result_calc(a, b, c):
-    if c == '+':
-        return (a + b)
-    if c == '-':
-        return (a - b)
-    if c == '*':
-        return (a * b)
-
-
 def result_nod(a, b):
     return gcd(a, b)
 
@@ -34,35 +25,12 @@ def result_prime(num):
     return ('yes')
 
 
-def calculations_game():
-    success = 0
-    while success < 3:
-        first_number = random.randrange(2, 100, 1)
-        second_number = random.randrange(2, 100, 1)
-        operations_list = ['+', '-', '*']
-        op = random.choice(operations_list)
-        print('Question:', first_number, ' ', op, ' ', second_number)
-        ans = prompt.string('Your answer: ')
-        correct_answer = str(result_calc(first_number, second_number, op))
-        if ans == correct_answer:
-            success = success + 1
-            print("Correct!")
-        else:
-            wrong_text = "' is wrong answer ;(. Correct answer was '"
-            text = "'" + ans + wrong_text + correct_answer + "'"
-            text = "Let's try again, " + cli.name + "!"
-            print(text)
-            break
-        if success == 3:
-            good()
-
-
 def nod_game():
     success = 0
     while success < 3:
         first_number = random.randrange(2, 100, 1)
         second_number = random.randrange(2, 100, 1)
-        text = 'Question:' + first_number + ' ' + second_number
+        text = 'Question:' + str(first_number) + ' ' + str(second_number)
         print(text)
         ans = prompt.string('Your answer: ')
         correct_answer = str(result_nod(first_number, second_number))
@@ -85,7 +53,7 @@ def progression_game():
         first_number = random.randrange(2, 10, 1)
         prog_step = random.randrange(1, 5, 1)
         mis_num = random.randrange(1, 10, 1)
-        text = 'Question: ' + first_number + ' '
+        text = 'Question: ' + str(first_number) + ' '
         print(text, end='')
         for i in range(10):
             if (i + 1) == mis_num:
@@ -120,7 +88,7 @@ def prime_game():
             print("Correct!")
         else:
             wrong_text = "' is wrong answer ;(. Correct answer was '"
-            text = "'" + ans + wrong_text + correct_answer + "'"
+            text = "'" + ans + wrong_text + str(correct_answer) + "'"
             print(text)
             text = "Let's try again, " + cli.name + "!"
             print(text)

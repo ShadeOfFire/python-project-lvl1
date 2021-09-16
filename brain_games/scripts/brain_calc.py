@@ -24,14 +24,14 @@ def main():
     cli.welcome_user('What is the result of the expression?')
     success = 0
     while success < 3:
-        first_number = random.randrange(2, 100, 1)
-        second_number = random.randrange(2, 100, 1)
+        first_n = random.randrange(2, 100, 1)
+        second_n = random.randrange(2, 100, 1)
         operations_list = ['+', '-', '*']
         oper = random.choice(operations_list)
-        text = 'Question: ' + first_number + ' ' + oper + ' ' + second_number
+        text = 'Question: ' + str(first_n) + ' ' + oper + ' ' + str(second_n)
         print(text)
         ans = prompt.string('Your answer: ')
-        correct_answer = str(result(first_number, second_number, oper))
+        correct_answer = str(result(first_n, second_n, oper))
         if ans == correct_answer:
             success = success + 1
             print("Correct!")
