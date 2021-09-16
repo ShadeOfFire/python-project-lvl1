@@ -1,5 +1,6 @@
 import prompt
 import random
+import math
 from brain_games import cli
 from fractions import gcd
 
@@ -19,6 +20,16 @@ def result_nod(a, b):
 
 def result_progression(start, step, index):
     return (start + step * index)
+
+
+def result_prime(num):
+    if num > 1:
+        for i in range(2, math.floor(math.sqrt(num))):
+            if (num % i) == 0:
+                return ('no')
+        return ('yes')
+    else:
+        print(num, "is not a prime number")
 
 
 def calculations_game():
@@ -77,7 +88,26 @@ def progression_game():
                 print(first_number + prog_step * (i + 1), ' ', end='')
         print()
         ans = prompt.string('Your answer: ')
-        correct_answer = str(result_progression(first_number, prog_step, mis_num))
+        correct_ans = str(result_progression(first_number, prog_step, mis_num))
+        if ans == correct_ans:
+            success = success + 1
+            print("Correct!")
+        else:
+            wrong_text = "' is wrong answer ;(. Correct answer was '"
+            print("'", ans, wrong_text, correct_ans, "'")
+            print("Let's try again, " + cli.name)
+            break
+        if success == 3:
+            print("Congratulations, " + cli.name)
+
+
+def prime_game():
+    success = 0
+    while success < 3:
+        number = random.randrange(2, 100, 1)
+        print('Question: ', number)
+        ans = prompt.string('Your answer: ')
+        correct_answer = result_prime(number)
         if ans == correct_answer:
             success = success + 1
             print("Correct!")
